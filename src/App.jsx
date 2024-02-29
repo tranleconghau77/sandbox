@@ -2,13 +2,16 @@ import CoreConcept from "./components/CoreConcept";
 import Header from "./components/Header/Header";
 import TabButton from "./components/TabButton";
 import { CORE_CONCEPTS } from "./data";
+import { useState } from "react";
+import React from "react";
 
 function App() {
-  let tabContent = 'Please click a button'
+  // let tabContent = 'Please click a button'
+  const [tabContent, setTabContent] = useState('Please click a button text')
 
   function handleSelect(selectedButton) {
     // console.log("Hello world!", selectedButton)
-    tabContent = selectedButton
+    setTabContent(selectedButton)
   }
 
   return (
